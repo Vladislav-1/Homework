@@ -196,11 +196,11 @@ header__input-search::placeholder:focus {
     text-decoration: none;
 }
 
-.footer__title-phone:hover {
+.footer__link-phone:hover {
     text-decoration: underline;
 }
 
-.footer__title-mail {
+.footer__link-mail {
     font-size: 14px;
     line-height: 17px;
     color: #888888;
