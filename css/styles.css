@@ -188,7 +188,7 @@ header__input-search::placeholder:focus {
     margin-bottom: 12px;
 }
 
-.footer__title-phone {
+.footer__link-phone {
     font-size: 14px;
     line-height: 17px;
     color: #888888;
@@ -208,7 +208,7 @@ header__input-search::placeholder:focus {
     text-decoration: none;
 }
 
-.footer__title-mail:hover {
+.footer__link-mail:hover {
     text-decoration: underline;
 }
 
