@@ -1,202 +1,573 @@
-<!DOCTYPE html>
-<html lang="en">
+* {
+    margin: 0;
+    padding: 0;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <title>Интернет-магазин</title>
-</head>
+body {
+    font-family: 'Montserrat', sans-serif;
+}
 
-<body>
+.header {
+    /* --- ИСПРАВЛЕНО --- */
+    height: 735px;
+    background-image: url('../images/hd-bg-im.jpeg');
+    background-position: 50% 50%;
+    background-size: cover;
+    padding: 0px calc(50% - 600px);
+}
 
-    <header class="header">
-        <div class="header__content-wrapper">
-            <a href="index.html"><img src="images/logo.svg" alt="логотип компании"></a>
-            <input type="text" placeholder="Поиск" class="header__input-search">
-            <nav>
-                <ul class="header__menu">
-                    <li class="header__item"><a href="#main__titl-offers" class="header__link">Каталог</a></li>
-                    <li class="header__item"><a href="lib/basket.html" class="header__link">Корзина</a></li>
-                </ul>
-            </nav>
-        </div>
-        <section class="header__section">
-            <div>
-                <h1 class="header__title">Всё, чего заслуживает ваш дом</h1>
-            </div>
-            <div>
-                <p class="header__txt-description">Наша мебель — ваше отражение</p>
-            </div>
-            <a href="catalog.html" class="header__link-catalog">Перейти в каталог</a>
+.header-catalog {
+    height: 400px;
+    background-image: url('../images/hd-bg-im-cat.jpeg');
+    background-position: 50% 50%;
+    background-size: cover;
+    padding: 0px calc(50% - 600px);
+}
 
-        </section>
+.header__content-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 16px 0px;
+    align-items: center;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.8);
+}
 
-    </header>
+.header__logo:hover {
+    opacity: 0.5;
+}
 
-    <main>
+.header__input-search {
+    max-width: 288px;
+    height: 41px;
+    box-sizing: border-box;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    background: transparent;
+    font-weight: 400;
+    font-size: 16px;
+    font: inherit;
+    padding: 10.5px 203px 10.5px 32px;
+}
 
-        <section class="main__section">
+.header__input-search::placeholder {
+    color: rgba(255, 255, 255,1.0);
+}
 
-            <h2 class="main__titl-offers" id="main__titl-offers">Специальные предложения</h2>
+header__input-search::placeholder:focus { 
+    color: transparent; 
+}
 
-            <div class="main__content-wrapper">
-                <article class="main__wrapper-card">
-                    <img src="images/product-chandelier.jpg" alt="Люстра VODA">
-                    <h3 class="main__titl-armchair">Люстра VODA</h3>
-                    <p class="main__text-option">Основание из полированной нержавеющей стали, придает оригинальный
-                        парящий
-                        эффект.</p>
-                    <div class="main__price-wrapper">
-                        <p class="main__text-sale">45 000 руб.</p>
-                        <p class="main__text-price">67 000 руб.</p>
-                    </div>
-                </article>
+/* ------------------------- */
 
-                <article class="main__wrapper-card">
-                    <img src="images/product-sofa.jpg" alt="Диван RONALD">
-                    <h3 class="main__titl-armchair">Диван RONALD</h3>
-                    <p class="main__text-option">Модель отличается простотой линий и форм, отсутствием броского декора.
-                    </p>
-                    <div class="main__price-wrapper">
-                        <p class="main__text-sale">156 000 руб.</p>
-                        <p class="main__text-price">198 000 руб.</p>
-                    </div>
-                </article>
+:focus::-webkit-input-placeholder {
+  color: transparent
+}
 
-                <article class="main__wrapper-card">
-                    <img src="images/product-chest-of-drawers.jpg" alt="Комод VENT">
-                    <h3 class="main__titl-armchair">Комод VENT</h3>
-                    <p class="main__text-option">Европейский дуб - отличается особой прочностью и стабильностью.</p>
-                    <div class="main__price-wrapper">
-                        <p class="main__text-sale">34 000 руб.</p>
-                        <p class="main__text-price">45 000 руб.</p>
-                    </div>
-                </article>
-            </div>
+:focus::-moz-placeholder {
+  color: transparent
+}
 
-            <h2 class="main__titl-catalog">Каталог товаров</h2>
+:focus:-moz-placeholder {
+  color: transparent
+}
 
-            <div class="main__cnt-wrapper">
-                <article class="main__wrapper-card">
-                    <img src="images/product-is-a-bed.jpg" alt="Кровать TATRAN">
-                    <h3 class="main__titl-armchair">Кровать TATRAN</h3>
-                    <p class="main__text-option">Основание из полированной нержавеющей стали, придает оригинальный
-                        парящий
-                        эффект.</p>
-                    <p class="main__text-sale">120 000 руб.</p>
-                    <!-- <p class="main__text-price">45 000 руб.</p> -->
-                </article>
+:focus:-ms-input-placeholder {
+  color: transparent
+}
 
-                <article class="main__wrapper-card">
-                    <img src="images/product-is-an-armchair.jpg" alt="мягкое кресло VILORA">
-                    <h3 class="main__titl-armchair">Кресло VILORA</h3>
-                    <p class="main__text-option">Мягкое и уютное, аккуратное и стильное. Упругие подушки, сиденья и
-                        приятная
-                        на
-                        ощупь
-                        ткань.</p>
-                    <p class="main__text-sale">21 000 руб.</p>
-                    <!-- <p class="main__text-price">28 000 руб.</p> -->
-                </article>
+/* ------------------------- */
 
-                <article class="main__wrapper-card">
-                    <img src="images/product-table.jpg" alt="Стол MENU">
-                    <h3 class="main__titl-armchair">Стол MENU</h3>
-                    <p class="main__text-option">Для того чтобы трапезничать было приятно, необходим правильный
-                        обеденный
-                        стол.</p>
-                    <p class="main__text-sale">34 000 руб.</p>
-                    <!-- <p class="main__text-price">28 000 руб.</p> -->
-                </article>
+.header__menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+}
 
-                <article class="main__wrapper-card">
-                    <img src="images/product-ASKETA-chair.jpg" alt="Кресло ASKESTA">
-                    <h3 class="main__titl-armchair">Кресло ASKESTA</h3>
-                    <p class="main__text-option">Высокоэластичный пенополиуретан в «начинке» кресла надежен и
-                        долговечен.
-                    </p>
-                    <p class="main__text-sale">68 000 руб.</p>
-                    <!-- <p class="main__text-price">28 000 руб.</p> -->
-                </article>
+.header__item {
+    list-style-type: none;
+}
 
-                <article class="main__wrapper-card">
-                    <img src="images/product-NORMAN-table.jpg" alt="Стол NORMAN">
-                    <h3 class="main__titl-armchair">Стол NORMAN</h3>
-                    <p class="main__text-option">Прекрасно переносит солнечные лучи, перепады влажности и любые осадки.
-                    </p>
-                    <p class="main__text-sale">40 000 руб.</p>
-                    <!-- <p class="main__text-price">28 000 руб.</p> -->
-                </article>
+.header__link {
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
 
-                <article class="main__wrapper-card">
-                    <img src="images/NASTAN-sofa.jpg" alt="Диван NASTAN">
-                    <h3 class="main__titl-armchair">Диван NASTAN</h3>
-                    <p class="main__text-option">Модель отличается простотой линий и форм, отсутствием броского декора.
-                    </p>
-                    <p class="main__text-sale">80 000 руб.</p>
-                    <!-- <p class="main__text-price">28 000 руб.</p> -->
-                </article>
-            </div>
+.header__link:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
 
-            <div class="main__link-wrapper">
+.header__title {
+    width: 792px; /* -- ИСПРАВИЛ -- */
+    /* height: 140px; */  /* -- ИСПРАВИЛ -- */
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 70px;
+    margin: 64px 0px 16px 0px;
+    color: #FFFFFF;
+}
 
-                <a href="catalog.html" class="main__link-catalog">Перейти в каталог</a>
+.header__txt-description {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 16px;
+    color: #FFFFFF;
+}
 
-            </div>
+.header__link-catalog {
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
 
-        </section>
+.header__link-catalog:hover {
+    text-decoration: underline;
+}
 
-    </main>
+.main__navbar {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+    height: 137px;
+    padding-top: 61px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
-    <footer class="footer">
-        <div class="footer__content-wrapper">
-            <div class="footer__logo-wrapper">
-                <img src="images/footer-logo.svg" alt="Логотип" class="footer-logo">
-            </div>
+.main__navbar-link-wrapper {
+    font-family: Montserrat;
+    font-weight: 400px;
+    font-size: 16px;
+    
+}
 
-            <div class="footer__menu-wrapper">
-                <h4 class="footer__title-menu">Меню</h4>
+.main__navbar-link {
+    text-decoration: none;
+}
 
-                <ul class="footer__menu">
-                    <li class="footer__list"><a href="index.html" class="footer__link">Главная</a></li>
-                    <li class="footer__list"><a href="catalog.html" class="footer__link">Каталог</a></li>
-                    <li class="footer__list"><a href="lib/basket.html" class="footer__link">Корзина</a></li>
-                </ul>
+.main__navbar-link:hover {
+    text-decoration: underline;
+    color: #888888;
+}
 
-            </div>
+.main__navbar-select-wrapper {
+    max-width: 419px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
 
-            <div class="footer__contacts-wrapper">
-                <h4 class="footer__title-contacts">Контакты</h4>
+.main__navbar-select-filter {
+    width: 182px;
+    max-height: 40px;
+    border: 1px solid rgb( 196 , 196 , 196); 
+    border-radius: 20px;
+    color: rgb( 0 , 0 , 0 );
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 23px;
+    padding-top: 9px;
+    padding-bottom: 11px;
+    appearance: none;
+    
+}
 
-                <a href="#" class="footer__title-phone">+7 908 800 80 80</a>
+.main__navbar-select-filter:not([multiple]) {
+  padding-right: 0px;
+  background-repeat: no-repeat;
+  background-position: 87% 52%;
+  background-size: 20 11;
+  background-image: url("../images/polygon.svg");
+}
 
-                <a href="#" class="footer__title-mail">help@interier.com</a>
+.main__navbar-select-option {
+    width: 227px;
+    max-height: 40px;
+    border: 1px solid rgb( 196 , 196 , 196); 
+    border-radius: 20px;
+    color: rgb( 0 , 0 , 0 );
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 23px;
+    padding-top: 9px;
+    padding-right: auto;
+    padding-bottom: 11px;
+    appearance: none;
+}
 
-                <div class="footer__messag-wrapper">
-                    <a href="#"><img src="images/vk.svg" alt="социальная сеть В контакте"></a>
+.main__navbar-select-option:not([multiple]) {
+  padding-right: 0px;
+  background-repeat: no-repeat;
+  background-position: 90% 52%;
+  background-size: 20 11;
+  background-image: url("../images/polygon.svg");
+}
 
-                    <a href="#"><img src="images/telegram.svg" alt="мессенджер Телеграм"></a>
+.main__section {
+    padding: 0px calc(50% - 600px);
+}
 
-                    <a href="#"><img src="images/dzen.svg" alt="блог-платформа Дзен"></a>
-                </div>
-            </div>
+.grid-wrapper {
+    max-width: 1200px;
+}
 
-            <form action="#" method="post" class="footer__form">
-                <p class="footer__form-text">Получайте наши новости и обновления</p>
-                <input type="email" class="footer__form-input">
-                <input type="button" value="Подписаться" class="footer__form-button">
-            </form>
+.main__titl-offers {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 59px;
+    color: #000000;
+    margin-bottom: 32px;
+    margin-top: 64px;
+}
+
+.main__furniture-card {
+    height: 415px;
+    
+}
+
+.section-furniture-for {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: space-between;
+    align-content: space-between;
+    grid-template-areas: 
+    'item_1 item_2'
+    'item_3 item_4 item_5';
+    row-gap: 31px;
+    column-gap: 32px;
+}
+
+.main__furniture-card {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 41px;
+    letter-spacing: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__furniture-link {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+font-family: Montserrat;
+font-size: 34px;
+font-weight: 600;
+line-height: 41px;
+letter-spacing: 0%;
+text-align: center;
+
+}
+
+.main__furniture-link:hover {
+    color: rgba(255,255,255,0.5);
+}
+
+.main__furniture-for-item_1 {
+    background-image: url('../images/for_1.jpeg');
+    max-width: 583px;
+    grid-area: item_1;
+    grid-column: 1 / 7;
+    grid-row: 1;
+}
+
+.main__furniture-for-item_2 {
+    background-image: url('../images/for_2.jpeg');
+    max-width: 583px;
+    grid-area: item_2;
+    grid-column: 7 / 13;
+    grid-row: 1;
+}
+
+.main__furniture-for-item_3 {
+    background-image: url('../images/for_3.jpeg');
+    max-width: 379px;
+    grid-area: item_3;
+    grid-column: 1 / 5;
+    grid-row: 2;
+}
+
+.main__furniture-for-item_4 {
+    background-image: url('../images/for_4.jpeg');
+    max-width: 379px;
+    grid-area: item_4;
+    grid-column: 5 / 9;
+    grid-row: 2;
+}
+
+.main__furniture-for-item_5 {
+    background-image: url('../images/for_5.jpeg');
+    max-width: 379px;
+    grid-area: item_5;
+    grid-column: 9 / 13;
+    grid-row: 2;
+}
+
+.main__content-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 31.5px;
+}
+
+.main__wrapper-card {
+    width: 379px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.main__wrapper-card img {
+    margin-bottom: 10px;
+}
+
+.main__titl-catalog {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 59px;
+    color: #000000;
+    margin-bottom: 32px;
+    margin-top: 64px;
+}
 
 
-        </div>
-    </footer>
 
-</body>
+.main__cnt-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 56px; /* -- ИСПРАВЛЕНО -- */
+    column-gap: 31.5px;
+}
 
-</html>
+.main__titl-armchair {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.main__text-option {
+    font-size: 14px;
+    line-height: 17px;
+    color: #888888;
+    margin-bottom: 12px;
+}
+
+.main__price-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.main__text-sale {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #050505;
+}
+
+.main__text-price {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    text-decoration-line: line-through;
+    color: #888888;
+}
+
+.main__link-wrapper {
+    padding-top: 39px; /* -- ИСПРАВЛЕНО -- */
+    margin-bottom: 64px;
+}
+
+.main__link-catalog {
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: underline;
+    color: #000000;
+    
+}
+
+.main__link-catalog:hover {
+    text-decoration: none;
+    color: rgb(136, 136, 136);
+}
+
+.footer {
+    height: 207px;
+    background: #F7F6F6;
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+    padding-top: 32px;
+}
+
+.footer__content-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* .footer-logo {
+    
+} */
+
+.footer__menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.footer__title-menu {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+}
+
+.footer__menu {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.footer__link { 
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #888888;
+    text-decoration: none;
+    
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+.footer__contacts-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.footer__title-contacts {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    color: #000000;
+}
+
+.footer__title-phone {
+    font-size: 14px;
+    line-height: 17px;
+    color: #888888;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.footer__title-phone:hover {
+    text-decoration: underline;
+}
+
+.footer__title-mail {
+    font-size: 14px;
+    line-height: 17px;
+    color: #888888;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.footer__title-mail:hover {
+    text-decoration: underline;
+}
+
+.footer__messag-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 20px;
+}
+
+#vk_off {
+    display: none;
+}
+
+#telegram_off {
+    display: none;
+}
+
+#dzen_off {
+    display: none;
+}
+
+.footer__form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.footer__form-text {
+    line-height: 16px;
+    color: #000000;
+    margin-bottom: 16px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0px;
+    
+}
+
+.footer__form-input {
+    max-width: 260px;  /* -- СООТВЕТСТВУЕТ МАКЕТУ -- */
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-family: inherit;   /* --- ИСПРАВЛЕНО --- */
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    color: #C4C4C4;
+    padding-left: 17px;
+}
+
+.footer__form-button {
+    max-width: 260px;  /* -- СООТВЕТСТВУЕТ МАКЕТУ -- */
+    margin-top: 8px;
+    background: rgba(222, 215, 215, 0.41);
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 20px;
+    height: 40px;
+    font-family: inherit;   /* --- ИСПРАВЛЕНО --- */
+    font-size: 12px;   /* --- ИСПРАВЛЕНО --- */
+    line-height: 18px;
+    color: #000000;
+}
+
+.footer__form-button:hover {
+    background: rgba(0, 0, 0, 1.0);
+    color: #ffffff;
+}
+
+
