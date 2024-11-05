@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="images/favicon4.ico" type="image/x-icon">
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <title>Интернет-магазин</title>
 </head>
@@ -17,11 +18,11 @@
 
     <header class="header">
         <div class="header__content-wrapper">
-            <a href="index.html"><img src="images/logo.svg" alt="логотип компании"></a>
+            <a href="index.html"><img src="images/logo.svg" alt="логотип компании" class="header__logo"></a>
             <input type="text" placeholder="Поиск" class="header__input-search">
             <nav>
                 <ul class="header__menu">
-                    <li class="header__item"><a href="#main__titl-offers" class="header__link">Каталог</a></li>
+                    <li class="header__item"><a href="lib/catalog.html" class="header__link">Каталог</a></li>
                     <li class="header__item"><a href="lib/basket.html" class="header__link">Корзина</a></li>
                 </ul>
             </nav>
@@ -33,13 +34,30 @@
             <div>
                 <p class="header__txt-description">Наша мебель — ваше отражение</p>
             </div>
-            <a href="catalog.html" class="header__link-catalog">Перейти в каталог</a>
+            <a href="lib/catalog.html" class="header__link-catalog">Перейти в каталог</a>
 
         </section>
 
     </header>
 
     <main>
+
+        <section class="main__section grid-wrapper">
+            <h2 class="main__titl-offers">Мебель для ... </h2>
+            <section class="section-furniture-for">
+                <article class="main__furniture-card main__furniture-for-item_1"><a href="#"
+                        class="main__furniture-link">ОТДЫХА</a></article>
+                <article class="main__furniture-card main__furniture-for-item_2"><a href="#"
+                        class="main__furniture-link">РАБОТЫ</a></article>
+                <article class="main__furniture-card main__furniture-for-item_3"><a href="#"
+                        class="main__furniture-link">КУХНИ</a></article>
+                <article class="main__furniture-card main__furniture-for-item_4"><a href="#"
+                        class="main__furniture-link">ДЕТСКОЙ</a>
+                </article>
+                <article class="main__furniture-card main__furniture-for-item_5"><a href="#"
+                        class="main__furniture-link">ВАННОЙ</a></article>
+            </section>
+        </section>
 
         <section class="main__section">
 
@@ -146,7 +164,7 @@
 
             <div class="main__link-wrapper">
 
-                <a href="catalog.html" class="main__link-catalog">Перейти в каталог</a>
+                <a href="lib/catalog.html" class="main__link-catalog">Перейти в каталог</a>
 
             </div>
 
@@ -165,7 +183,7 @@
 
                 <ul class="footer__menu">
                     <li class="footer__list"><a href="index.html" class="footer__link">Главная</a></li>
-                    <li class="footer__list"><a href="catalog.html" class="footer__link">Каталог</a></li>
+                    <li class="footer__list"><a href="lib/catalog.html" class="footer__link">Каталог</a></li>
                     <li class="footer__list"><a href="lib/basket.html" class="footer__link">Корзина</a></li>
                 </ul>
 
@@ -174,29 +192,36 @@
             <div class="footer__contacts-wrapper">
                 <h4 class="footer__title-contacts">Контакты</h4>
 
-                <a href="#" class="footer__title-phone">+7 908 800 80 80</a>
+                <a href="tel:+79088008080" class="footer__title-phone">+7 908 800 80 80</a>
 
-                <a href="#" class="footer__title-mail">help@interier.com</a>
+                <a href="mailto:help@interier.com" class="footer__title-mail">help@interier.com</a>
 
                 <div class="footer__messag-wrapper">
-                    <a href="#"><img src="images/vk.svg" alt="социальная сеть В контакте"></a>
+                    <a href="https://vk.com" target="_blank"><img src="images/vk.svg" alt="социальная сеть В контакте"
+                            id="vk_on" onmouseenter="hide_link_vk()"><img src="images/vk_hover.svg"
+                            alt="социальная сеть В контакте" id="vk_off" onmouseleave="show_link_vk()"></a>
 
-                    <a href="#"><img src="images/telegram.svg" alt="мессенджер Телеграм"></a>
+                    <a href="https://telegram.org" target="_blank"><img src="images/telegram.svg"
+                            alt="мессенджер Телеграм" id="telegram_on" onmouseenter="hide_link_telegram()"><img
+                            src="images/telegram_hover.svg" alt="мессенджер Телеграм" id="telegram_off"
+                            onmouseleave="show_link_telegram()"></a>
 
-                    <a href="#"><img src="images/dzen.svg" alt="блог-платформа Дзен"></a>
+                    <a href="https://dzen.ru" target="_blank"><img src="images/dzen.svg" alt="блог-платформа Дзен"
+                            id="dzen_on" onmouseenter="hide_link_dzen()"><img src="images/dzen_hover.svg"
+                            alt="блог-платформа Дзен" id="dzen_off" onmouseleave="show_link_dzen()"></a>
                 </div>
             </div>
 
             <form action="#" method="post" class="footer__form">
                 <p class="footer__form-text">Получайте наши новости и обновления</p>
-                <input type="email" class="footer__form-input">
+                <input type="email" class="footer__form-input" placeholder="Ваш e-mail"> <!-- ИСПРАВЛЕНО -->
                 <input type="button" value="Подписаться" class="footer__form-button">
             </form>
 
 
         </div>
     </footer>
-
+    <script src="js/script.js"></script>
 </body>
 
 </html>
