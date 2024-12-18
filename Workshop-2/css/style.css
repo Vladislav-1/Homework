@@ -1,1 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+.header {
+  width: 1440px;
+  height: 120px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.header__logo {
+  width: 305px;
+  height: 39px;
+  color: rgb(69, 64, 61);
+  font-family: Montserrat Alternates;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 39px;
+  margin-left: 120px;
+  text-transform: uppercase;
+}
+.header__nav {
+  width: 422px;
+  height: 20px;
+  margin-left: 256px;
+}
+.header__nav .header__navbar {
+  display: flex;
+  gap: 48px;
+}
+.header__nav .header__navbar .header__item {
+  list-style-type: none;
+}
+.header__nav .header__navbar .header__item .header__link {
+  color: rgb(69, 64, 61);
+  font-family: Montserrat Alternates;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  text-decoration: none;
+}
+.header__nav .header__navbar .header__item .header__link:hover {
+  text-decoration: underline;
+}
+.header__button {
+  width: 169px;
+  height: 52px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 36px 16px 36px;
+  box-sizing: border-box;
+  border: 1px solid rgb(162, 101, 57);
+  border-radius: 24px;
+  background-color: transparent;
+  color: rgb(162, 101, 57);
+  font-family: Montserrat Alternates;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin-left: 48px;
+}
+.header__button:hover {
+  color: #fff;
+  background-color: rgb(162, 101, 57);
+  cursor: pointer;
+}
+
+.main {
+  width: 1440px;
+  height: 770px;
+  margin: 0 auto;
+  background: rgb(246, 245, 244);
+  padding-top: 118.85px;
+  position: relative;
+}
+.main__section {
+  margin-left: 118px;
+  /* margin-top: 118.85px; */
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.main__section .section__box .box__title {
+  width: 560px;
+  height: 117px;
+  color: rgb(69, 64, 61);
+  font-family: Montserrat Alternates;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 59px;
+}
+.main__section .section__box .box__title .title__weight {
+  font-weight: 400;
+}
+.main__section .section__box .box__subtitle {
+  width: 498.9px;
+  height: 58px;
+  color: rgb(69, 64, 61);
+  font-family: Montserrat Alternates;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  margin-top: 24px;
+}
+.main__section .section__box .box__text {
+  width: 498.9px;
+  /* height: 127px; */
+  color: rgb(69, 64, 61);
+  font-family: Montserrat Alternates;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.main__section .section__box .mt24 {
+  margin-top: 24px;
+}
+.main__section .section__box .mt7 {
+  margin-top: 7px;
+}
+.main__section .section__button {
+  width: 366px;
+  height: 52px;
+  box-sizing: border-box;
+  border: 1px solid rgb(162, 101, 57);
+  border-radius: 24px;
+  color: rgb(162, 101, 57);
+  font-family: Montserrat Alternates;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  background-color: transparent;
+}
+.main__section .section__button:hover {
+  color: #fff;
+  background-color: rgb(162, 101, 57);
+  cursor: pointer;
+}
+.main__collage .collage__board {
+  max-width: 855px;
+  min-width: 805px;
+  height: 870px;
+  background-image: url(../images/board.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: -50px;
+  right: 0px;
+}
+.main__collage .collage__coffee-beans {
+  width: 270.15px;
+  height: 270.15px;
+  background-image: url(../images/coffee-beans.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 63.85px;
+  right: 104.17px;
+  z-index: 1;
+}
+.main__collage .collage__coffee {
+  width: 575.15px;
+  height: 575.15px;
+  background-image: url(../images/coffee.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: -45px;
+  right: 230.17px;
+  z-index: 1;
+}
+.main__collage .collage__cinabon {
+  width: 578.15px;
+  height: 578.15px;
+  background-image: url(../images/cinabon.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 198px;
+  right: -60.17px;
+  z-index: 1;
+}
+.main__collage .collage__cookie {
+  width: 393.15px;
+  height: 393.15px;
+  background-image: url(../images/cookie.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 383px;
+  right: 394.17px;
+  z-index: 1;
+}/*# sourceMappingURL=style.css.map */
